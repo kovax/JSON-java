@@ -942,6 +942,7 @@ public class XMLTest {
                 xmlStream = XMLTest.class.getClassLoader().getResourceAsStream("Issue537.xml");
                 Reader xmlReader = new InputStreamReader(xmlStream);
                 JSONObject actual = XML.toJSONObject(xmlReader, true);
+                System.out.println(actual.toString(2));
                 InputStream jsonStream = null;
                 try {
                     jsonStream = XMLTest.class.getClassLoader().getResourceAsStream("Issue537.json");
